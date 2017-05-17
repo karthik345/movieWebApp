@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="movieApp">
+	<head>
+		<title>Movie Web App</title>	
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/isteven-angular-multiselect/isteven-multi-select.css" />
+    <link rel="stylesheet" href="css/main.css" />    
+	 <script src="bower_components/angular/angular.js"></script>
+	 <script src="bower_components/angular-resource/angular-resource.js"></script>
+	 <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/isteven-angular-multiselect/isteven-multi-select.js"></script>  
+     <script src="directives/app.js"></script>
+        <script src="directives/services.js"></script>	 
+        <script src="directives/directives.js"></script>	 
+        <script src="directives/controllers.js"></script>	 
+        <script src="directives/routes.js"></script>	 
+	</head>
+	<body>
+    <center>    
+	<header>
+        
+		<nav class="modal-header bg-primary">
+			<div class="container">
+				<div class="header">
+				<h1><strong>Movie Web Application</strong></h1>
+					<a class="btn btn-default" href="#/" role="button">User Home</a>
+					 <a class="btn btn-default" href="#/search" role="button">Search Movie</a>
+					 <a class="btn btn-default" href="#/createList" role="button">Create New Movie List</a>
+				</div>
+			</div>
+		</nav>
+           
+	</header>
+    </center>    
+       <div class="container">
+          
+            <div ng-view></div>
+             
+		</div>
+         
+	</body>
+</html>
+

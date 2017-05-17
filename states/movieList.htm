@@ -1,0 +1,30 @@
+<div class="table-responsive">
+  <table class="table">
+  </table>
+</div>
+
+<body>
+ <div id="wrapper">
+  <h1>Movie List: {{listName}}</h1>
+  
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th><span>Movie Name</span></th>
+        <th><span>Year</span></th>
+        <th><span>Genre</span></th>
+        <th><span>IMDB Rating(/10)</span></th>
+        <th><span>User rating(/5)</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat ='rm in resultMovies'>
+        <td class="ralign">{{rm.Title}}</td>
+        <td>{{rm.Year}}</td>
+        <td>{{rm.Genre}}</td>
+        <td>{{rm.imdbRating}}</td>
+        <td>{{rm.myRating}}</td>
+      </tr>
+    </tbody>
+  </table>
+ </div>

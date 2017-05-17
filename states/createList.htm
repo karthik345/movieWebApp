@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">    
+        <hr>
+        <form ng-submit="add()">
+        <div class="input-group">
+           <input autofocus required ng-model="title" type="text" class="form-control input-lg" placeholder="Add new Movie List">
+            <span class="input-group-btn">
+              <button class="btn btn-primary btn-lg" type="submit">ADD</button>
+            </span>
+        </div>
+        </form>
+        <hr>
+    </div>
+</div>
+
+<div id="inner" class="" ng-show="results">
+		<p>List sucessfully created, Please redirect to Search Movies  to start adding movies to the list?</p>
+</div>
+	

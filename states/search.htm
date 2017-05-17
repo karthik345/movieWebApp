@@ -1,0 +1,105 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">    
+        <hr>
+        <form ng-submit="submit()">
+        <div class="input-group">
+           <input autofocus required ng-model="search" type="text" class="form-control input-lg" placeholder="Search for a movie!">
+            <span class="input-group-btn">
+              <button class="btn btn-primary btn-lg" type="submit">SEARCH</button>
+            </span>
+        </div>
+        </form>
+        <hr>
+    </div>
+</div>
+
+<div class="alert alert-info" ng-show="loading">
+   <div class="row">
+      <div class="col-md-12">
+          <div>Loading...</div>
+       </div>
+   </div>
+</div>
+
+<div class="well" ng-show="results">
+    <div class="row">
+        <div class="col-md-4">
+            <a ng-href="http://www.imdb.com/title/{{movie.imdbID}}/" target="_blank">
+                <img class="img-responsive" ng-src="{{movie.Poster}}" alt="{{movie.Title}}" />
+            </a>
+        </div>
+        <div class="col-md-8">
+            <button type="button" class="close" ng-click="results = !results">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+            </button>
+            <p class="lead"><b>
+                <a ng-href="http://www.imdb.com/title/{{movie.imdbID}}/" target="_blank">{{movie.Title}}</a>
+                </b></p>
+            
+            <p class="lead"><b>IMDB Rating:</b>{{movie.imdbRating}} </p>
+              
+            <p class="lead">
+                <b>Genre: </b>{{movie.Genre}}<br />
+                <b>Released: </b>{{movie.Released | date: 'MM' }} <br>
+                <b>Director:</b> {{movie.Director}}<br />
+                <b>Actors:</b> {{movie.Actors}}<br>
+            </p>
+
+                        <button class="btn btn-success" ng-click="displayList()"><span class="glyphicon glyphicon-plus"></span> Add to My Movie list</button>
+            <br><br>
+            <div class="form-group">
+            <div ng-show="saveMovieDisp">
+                <table>
+                    <tr>
+                        <td>
+                        <p class="lead">Your Rating for this movie:</p>
+                        </td>
+                        <td>
+                        <div ng-repeat="rating in ratings">
+                <div star-rating rating-value="rating.current" max="rating.max" on-rating-selected="getSelectedRating(rating)"></div>         
+            </div>  
+                        </td>
+                    </tr>
+                    <tr><td>
+                        <p class="lead">Choose Movie lists to Add:</p>
+                        </td>
+                        <td>
+                            
+                        
+       
+         <div  isteven-multi-select
+                input-model="dropDownAry"
+                output-model="dropDownRsltAry"
+                button-label="icon name"
+                item-label="icon name maker"
+                tick-property="ticked"
+        >  
+        </div>
+        
+               
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="btn btn-success" ng-click="savelist()"><span class="glyphicon glyphicon"></span> SAVE</button>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+                 <div ng-show="saveDispOk1">
+                                Sucessfully added !!
+                </div>
+                 <div ng-show="saveDispOk2">
+                                Choose atleast one movie
+                </div>
+                 
+            </div>
+ </div>
+          </div>
+      </div>
+  </div>
+
+            <div class="alert alert-danger" role="alert" ng-show="error">
+                <strong>Ooops!</strong> Couldnt find a movie with that name.
+            </div>

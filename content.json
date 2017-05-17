@@ -1,0 +1,63 @@
+[
+                    { 
+                        "name": "Sience fiction movie list", 
+                        "listId": "0",
+                        "movies": [
+                            {"id":"tt0088763",
+                             "uRate":"2"
+                            },
+                            {"id":"tt0078748",
+                             "uRate":"4"
+                            },
+                            {"id":"tt0499549",
+                             "uRate":"5"                                
+                            }
+                        ]    
+                    },
+                    { 
+                        "name": "Action movie list", 
+                        "   listId": "1",
+                        "movies": [
+                            {"id":"tt0848228",
+                             "uRate":"2"
+                            },
+                            {"id":"tt0462499",
+                             "uRate":"4"
+                            },
+                            {"id":"tt0106062",
+                             "uRate":"5"                                
+                            }
+                        ]    
+                    },
+                    { 
+                        "name": "Friday list", 
+                        "listId": "2",
+                        "movies": [
+                            {"id":"tt2911666",
+                             "uRate":"2"
+                            },
+                            {"id":"tt2072233",
+                             "uRate":"4"
+                            },
+                            {"id":"tt0944947",
+                             "uRate":"5"                                
+                            },
+                            {"id":"tt1856010",
+                             "uRate":"5"                                
+                            }
+                        ]    
+                    },
+                     { 
+                        "name": "Telugu movie list", 
+                        "listId": "3",
+                         "movies": [
+                            {"id":"tt2631186",
+                             "uRate":"2"
+                            },
+                            {"id":"tt2258337",
+                             "uRate":"4"
+                            }
+                        ]       
+                    }        
+                    
+    ]
